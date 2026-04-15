@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Acid Labs">
+  <rect width="100" height="100" rx="22" fill="#0b1f17"/>
+  <path
+    fill="#3ee08f"
+    d="M50 22 72 78H58l-4-12H38l-4 12H22L44 22h6Zm-6 36h12L50 40 44 58Z"
+  />
+</svg>

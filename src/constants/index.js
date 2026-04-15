@@ -12,20 +12,14 @@ import {
     redux,
     tailwind,
     nodejs,
-    mongodb,
     git,
     figma,
     docker,
-    meta,
-    // starbucks,
     modyo,
     xepelin,
     digbang,
     almundo,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
+    acidlabs,
     olx,
     pasap,
     modyo_screen,
@@ -118,6 +112,24 @@ import {
   ];
   
   const experiences = [
+    {
+      title: "Frontend Developer",
+      company_name: "Acid Labs",
+      employment: "Full-time",
+      location: "Argentina · Remote",
+      icon: acidlabs,
+      iconBg: "#0b1f17",
+      date: "Jun 2024 - Present · 1 yr 11 mos",
+      intro_heading: "Role in Airtalk (LATAM Airlines)",
+      intro:
+        "I am part of the team behind Airtalk, LATAM Airlines' strategic chatbot that translates natural language into SQL queries through Large Language Models (LLMs), enabling business users to access and analyze complex datasets without technical knowledge. I also contribute to the design of the AI-driven analytics layer, enhancing reporting processes, operational metrics, and data insights.",
+      points: [
+        "Lead the definition and curation of business rules and usage notes to ensure semantic accuracy in query generation.",
+        "Develop and maintain context shots that guide the model in handling evolutionary queries, date filters, and key airline metrics such as FO, ASK, and RPK.",
+        "Collaborate on prompt engineering and automated evaluation pipelines, improving robustness and consistency of model outputs.",
+        "Drive the application of AI for flight operations and financial control, aligning advanced analytics with business needs.",
+      ],
+    },
     {
       title: "Frontend Developer",
       company_name: "Modyo",

@@ -28,7 +28,7 @@ import modyo from "./company/modyo.png";
 import xepelin from "./company/xepelin.png";
 import digbang from "./company/digbang.png";
 import almundo from "./company/almundo.png";
-import tesla from "./company/tesla.png";
+import acidlabs from "./company/acidlabs.svg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -66,6 +66,7 @@ export {
   xepelin,
   digbang,
   almundo,
+  acidlabs,
   carrent,
   jobit,
   tripguide,

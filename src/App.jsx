@@ -1,28 +1,46 @@
-import { BrowserRouter as Router} from "react-router-dom"
-// import Routes from './routes'
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas} from './components'
+import { lazy, Suspense } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Experience, Hero, Navbar } from "./components";
+
+const Tech = lazy(() => import("./components/Tech"));
+const Works = lazy(() => import("./components/Works"));
+const Contact = lazy(() => import("./components/Contact"));
+const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
+
+const SectionFallback = () => (
+  <div
+    className="min-h-[200px] flex items-center justify-center py-16"
+    aria-busy="true"
+    aria-label="Cargando sección"
+  >
+    <span className="h-10 w-10 rounded-full border-2 border-secondary border-t-transparent animate-spin" />
+  </div>
+);
 
 function App() {
   return (
-     <Router>
+    <Router>
       <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bv-no-repeat bg-center">
-            <Navbar/>
-            <Hero />
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+          <Navbar />
+          <Hero />
         </div>
-        {/* <About /> */}
         <Experience />
-        <Tech />
-        <Works />
-        {/* <Feedbacks /> */}
+        <Suspense fallback={<SectionFallback />}>
+          <Tech />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <Works />
+        </Suspense>
         <div className="relative z-0">
+          <Suspense fallback={<SectionFallback />}>
             <Contact />
             <StarsCanvas />
+          </Suspense>
         </div>
       </div>
-       
-     </Router>
-  )
+    </Router>
+  );
 }
 
 export default App
