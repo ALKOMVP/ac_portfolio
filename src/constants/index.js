@@ -23,6 +23,8 @@ import {
     olx,
     pasap,
     modyo_screen,
+    airtalk_preview,
+    solverive_preview,
     threejs,
   } from "../assets";
   
@@ -205,6 +207,32 @@ import {
   ];
   
   const projects = [
+    {
+      name: "Airtalk",
+      description:
+        "Strategic analytics chatbot for LATAM Airlines: natural language is translated into SQL via LLMs so business teams query complex datasets without writing code—covering operational and financial views and airline metrics such as FO, ASK, and RPK.",
+      tags: [
+        { name: "LLM", color: "blue-text-gradient" },
+        { name: "Python", color: "green-text-gradient" },
+        { name: "SQL", color: "pink-text-gradient" },
+        { name: "PromptEngineering", color: "blue-text-gradient" },
+      ],
+      image: airtalk_preview,
+      preview_object_position: "right",
+      source_code_link: "https://github.com/",
+    },
+    {
+      name: "Solverive",
+      description:
+        "End-to-end platform for studios and class-based businesses: web admin panel plus WhatsApp automation so students browse schedules, book or cancel spots, and join waitlists—no extra apps. Includes enrollments, quotas, reminders, and optional studio website with SEO basics.",
+      tags: [
+        { name: "WhatsAppAPI", color: "blue-text-gradient" },
+        { name: "NodeJS", color: "green-text-gradient" },
+        { name: "React", color: "pink-text-gradient" },
+      ],
+      image: solverive_preview,
+      source_code_link: "https://github.com/",
+    },
     {
       name: "OLX Autos",
       description:

@@ -36,6 +36,8 @@ import tripguide from "./tripguide.png";
 import olx from "./olx.png";
 import pasap from "./pasap.png";
 import modyo_screen from "./modyo.png";
+import airtalk_preview from "./airtalk_preview.png";
+import solverive_preview from "./solverive_preview.png";
 
 export {
   logo,
@@ -72,5 +74,7 @@ export {
   tripguide,
   olx,
   pasap,
-  modyo_screen
+  modyo_screen,
+  airtalk_preview,
+  solverive_preview,
 };
