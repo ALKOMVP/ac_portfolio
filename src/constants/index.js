@@ -56,20 +56,20 @@ import {
       tags: ["AI", "Cloudflare", "React"],
     },
     {
+      name: "mascotApp",
+      description:
+        "Catálogo y mapa de mascotas perdidas y encontradas en Argentina.",
+      url: "https://mascotapp.alancorcos.com",
+      badge: "🐾",
+      tags: ["Mapas", "React", "Cloudflare"],
+    },
+    {
       name: "Solverive",
       description:
         "Plataforma para estudios y clases: panel web + WhatsApp para reservas, cupos, waitlist y recordatorios.",
       url: "https://solverive.com",
       badge: "📅",
       tags: ["WhatsApp", "Node", "React"],
-    },
-    {
-      name: "Airtalk",
-      description:
-        "Chatbot analítico para LATAM Airlines: lenguaje natural → SQL con LLMs para equipos de negocio.",
-      url: "/portfolio#works",
-      badge: "✈️",
-      tags: ["LLM", "SQL", "LATAM"],
     },
   ];
 

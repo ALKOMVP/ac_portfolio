@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { apps } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 
 const AppCard = ({ index, name, description, url, tags, badge }) => {
   const external = /^https?:\/\//i.test(url);
@@ -64,9 +64,14 @@ const AppCard = ({ index, name, description, url, tags, badge }) => {
 const Apps = () => {
   return (
     <div className="relative z-0 bg-primary min-h-screen">
-      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-        <section className={`${styles.padding} max-w-7xl mx-auto pt-28 pb-10`}>
-          <motion.div initial="hidden" animate="show" variants={textVariant()}>
+      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center overflow-visible">
+        {/* Explicit pt (no styles.padding py-*) so fixed navbar does not clip the eyebrow */}
+        <section className="px-6 sm:px-16 pt-32 sm:pt-36 pb-10 max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
             <p className={styles.sectionSubText}>Productos en vivo</p>
             <h1 className={`${styles.heroHeadText} text-white`}>
               Mis <span className="text-[#915eff]">Apps</span>
