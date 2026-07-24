@@ -38,22 +38,22 @@ const AppCard = ({ index, name, description, url, tags, badge }) => {
     </Tilt>
   );
 
+  const wrapClass =
+    "block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#915eff] rounded-2xl";
+
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.15, 0.6)} className="h-full">
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.15, 0.6)}
+      initial="hidden"
+      animate="show"
+      className="h-full"
+    >
       {external ? (
-        <a
-          href={url}
-          target="_blank"
-          rel="noreferrer"
-          className="block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#915eff] rounded-2xl"
-        >
+        <a href={url} target="_blank" rel="noreferrer" className={wrapClass}>
           {inner}
         </a>
       ) : (
-        <Link
-          to={url}
-          className="block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#915eff] rounded-2xl"
-        >
+        <Link to={url} className={wrapClass}>
           {inner}
         </Link>
       )}
@@ -66,7 +66,7 @@ const Apps = () => {
     <div className="relative z-0 bg-primary min-h-screen">
       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
         <section className={`${styles.padding} max-w-7xl mx-auto pt-28 pb-10`}>
-          <motion.div variants={textVariant()} initial="hidden" animate="show">
+          <motion.div initial="hidden" animate="show" variants={textVariant()}>
             <p className={styles.sectionSubText}>Productos en vivo</p>
             <h1 className={`${styles.heroHeadText} text-white`}>
               Mis <span className="text-[#915eff]">Apps</span>

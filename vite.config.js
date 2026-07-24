@@ -4,7 +4,8 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "",
+  // Absolute paths so client routes like /portfolio still load /assets/*
+  base: "/",
   build: {
     rollupOptions: {
       output: {
