@@ -5,24 +5,27 @@
 - Cloudflare Pages production **antes** del cambio: `0814aab9-faee-4fa4-854f-d410607ab914`
   - Preview: https://0814aab9.ac-portfolio.pages.dev
   - Dashboard: https://dash.cloudflare.com/73222d0ff301aa06195455f0a0532f95/pages/view/ac-portfolio/0814aab9-faee-4fa4-854f-d410607ab914
+- Deployment **nuevo** (Apps home): `98539e11` → https://98539e11.ac-portfolio.pages.dev
 
-## Volver atrás (recomendado)
-1. Abrí el deployment viejo en el dashboard de Pages.
-2. **Rollback to this deployment** (Promote).
-
-O desde CLI (si tu cuenta lo soporta):
-```bash
-npx wrangler pages deployment list --project-name=ac-portfolio
-# luego promote / rollback del id 0814aab9-...
-```
+## Volver atrás (recomendado — 30 s)
+1. Abrí: https://dash.cloudflare.com/73222d0ff301aa06195455f0a0532f95/pages/view/ac-portfolio/0814aab9-faee-4fa4-854f-d410607ab914
+2. Click **Rollback to this deployment**.
 
 ## Volver el código
 ```bash
+cd ~/projects/ac_portfolio
 git checkout main
 git reset --hard pre-apps-home-2026-07-24
-# o: git revert <commit-del-refactor>
-git push --force-with-lease   # solo si hace falta alinear remote
+git push --force-with-lease origin main
+# y redeploy o rollback en Pages
 ```
 
 ## Dominio apps.alancorcos.com
-Si hay que quitar el subdomain: Cloudflare Pages → ac-portfolio → Custom domains → Remove `apps.alancorcos.com`.
+Agregado al proyecto Pages (puede quedar `pending` hasta DNS/SSL).
+Si no resuelve, en Cloudflare DNS de `alancorcos.com` creá:
+- Tipo: **CNAME**
+- Nombre: `apps`
+- Destino: `ac-portfolio.pages.dev`
+- Proxy: ON
+
+Para quitar el subdomain: Pages → ac-portfolio → Custom domains → Remove `apps.alancorcos.com`.
