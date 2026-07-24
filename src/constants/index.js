@@ -28,7 +28,7 @@ import {
     threejs,
   } from "../assets";
   
-  export const navLinks = [
+  export const portfolioNavLinks = [
     {
       id: "experience",
       title: "Work Experience",
@@ -42,7 +42,37 @@ import {
       title: "Contact",
     },
   ];
-  
+
+  /** @deprecated use portfolioNavLinks — kept for compatibility */
+  export const navLinks = portfolioNavLinks;
+
+  const apps = [
+    {
+      name: "RecetApp",
+      description:
+        "Foto de ingredientes → recetas con IA, faltantes, precios orientativos y mapa de comercios cerca.",
+      url: "https://recetapp.alancorcos.com",
+      badge: "🥘",
+      tags: ["AI", "Cloudflare", "React"],
+    },
+    {
+      name: "Solverive",
+      description:
+        "Plataforma para estudios y clases: panel web + WhatsApp para reservas, cupos, waitlist y recordatorios.",
+      url: "https://solverive.com",
+      badge: "📅",
+      tags: ["WhatsApp", "Node", "React"],
+    },
+    {
+      name: "Airtalk",
+      description:
+        "Chatbot analítico para LATAM Airlines: lenguaje natural → SQL con LLMs para equipos de negocio.",
+      url: "/portfolio#works",
+      badge: "✈️",
+      tags: ["LLM", "SQL", "LATAM"],
+    },
+  ];
+
   const services = [
     {
       title: "Web Developer",
@@ -298,5 +328,5 @@ import {
     },
   ];
   
-  export { services, technologies, experiences, testimonials, projects };
+  export { services, technologies, experiences, testimonials, projects, apps };
   
