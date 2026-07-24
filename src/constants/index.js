@@ -56,7 +56,7 @@ import {
       tags: ["AI", "Cloudflare", "React"],
     },
     {
-      name: "mascotApp",
+      name: "MascotApp",
       description:
         "Catálogo y mapa de mascotas perdidas y encontradas en Argentina.",
       url: "https://mascotapp.alancorcos.com",
